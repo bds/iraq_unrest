@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Iraq Government Casualty Figures</title>
+  <%= header %>
+</head>
+
+<body>
+<h1>Iraq Government Casualty Figures</h1>
+<p><a href="https://github.com/bds/iraq_toll">https://github.com/bds/iraq_toll</a></p>
+<div id="chart_container">
+  <div id="y_axis"></div>
+  <div id="chart"></div>
+</div>
+<div id="legend"></div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.3.3/d3.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rickshaw/1.3.0/rickshaw.min.js"></script>
+
+<script type="text/javascript">
+  var palette = new Rickshaw.Color.Palette( { scheme: 'cool' } );
+
+  var graph = new Rickshaw.Graph( {
+    element: document.querySelector("#chart"),
+    renderer: 'area', width: 640, height: 480,
+    series: [ {
+      name: 'Civilian Killed',
+      color: palette.color(),
+      data: <%= JSON.generate(data[:civilian_killed]) %>
+    }, {
+      name: 'Civilian Wounded',
+      color: palette.color(),
+      data: <%= JSON.generate(data[:civilian_wounded]) %>
+    }, {
+      name: 'Police Killed',
+      color: palette.color(),
+      data: <%= JSON.generate(data[:police_killed]) %>
+    }, {
+      name: 'Police Wounded',
+      color: palette.color(),
+      data: <%= JSON.generate(data[:police_wounded]) %>
+    }, {
+      name: 'Army Killed',
+      color: palette.color(),
+      data: <%= JSON.generate(data[:army_killed]) %>
+    }, {
+      name: 'Army Wounded',
+      color: palette.color(),
+      data: <%= JSON.generate(data[:army_wounded]) %>
+    }, {
+      name: 'Insurgent Killed',
+      color: palette.color(),
+      data: <%= JSON.generate(data[:insurg_killed]) %>
+    }, {
+      name: 'Insurgent Arrested',
+      color: palette.color(),
+      data: <%= JSON.generate(data[:insurg_arrested]) %>
+    } ]});
+
+  var x_axis = new Rickshaw.Graph.Axis.Time( { 
+    graph: graph
+  } );
+
+  var y_axis = new Rickshaw.Graph.Axis.Y( {
+    graph: graph,
+    orientation: 'left',
+    element: document.getElementById('y_axis'),
+  } );
+
+  var legend = new Rickshaw.Graph.Legend({
+    graph: graph,
+    element: document.getElementById('legend')
+  });
+
+  var shelving = new Rickshaw.Graph.Behavior.Series.Toggle({
+      graph: graph,
+      legend: legend
+  });
+
+  var highlighter = new Rickshaw.Graph.Behavior.Series.Highlight({
+    graph: graph,
+    legend: legend
+  });
+
+  var hoverDetail = new Rickshaw.Graph.HoverDetail( {
+      graph: graph,
+      yFormatter: function(y) { return Math.floor(y) + "" }
+  } );
+
+  graph.render();
+</script> 
+
+</body>
+</html>

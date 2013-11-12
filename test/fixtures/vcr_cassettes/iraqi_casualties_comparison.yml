@@ -1,0 +1,184 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://docs.google.com/spreadsheet/pub?gid=9&hl=en_US&key=0Aia6y6NymliRdEZESktBSWVqNWM1dkZOSGNIVmtFZEE&output=csv
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/csv
+      X-Robots-Tag:
+      - noindex, nofollow, nosnippet
+      Content-Disposition:
+      - attachment; filename="Iraq Unrest.csv"
+      Set-Cookie:
+      - NID=67=dJclmwa8iaDNZ4CB0RxHEiP_3spkVXQxeKZpER9-lmcnWKK0luvNaqQXJhyKQg9u8-S1oJIq99n0uwyHao4h1KPz4NSZVy-3wqI8RSumVbTWz4lKwuNEnitFFPOsiD1k;Domain=.google.com;Path=/;Expires=Wed,
+        14-May-2014 16:29:13 GMT;HttpOnly
+      P3p:
+      - CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657
+        for more info."
+      Date:
+      - Tue, 12 Nov 2013 16:29:13 GMT
+      Expires:
+      - Tue, 12 Nov 2013 16:29:13 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Alternate-Protocol:
+      - 443:quic
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        Iraqi Casualties: A Comparison,,,
+        ,,,
+        "This sheet provides a comparison between data compiled by AFP, based on reports from security and medical officials, data compiled by the Iraqi ministries of health, interior and defence, and data compiled by Britain-based NGO Iraq Body Count",,,
+        ,,,
+        ,KILLED,,
+        ,Iraq Government,Iraq Body Count,AFP
+        Dec-2013,0,,
+        Nov-2013,0,,139
+        Oct-2013,964,,743
+        Sep-2013,885,,880
+        Aug-2013,356,,693
+        Jul-2013,921,,875
+        Jun-2013,240,,452
+        May-2013,630,887,614
+        Apr-2013,205,544,461
+        Mar-2013,163,395,271
+        Feb-2013,136,358,220
+        Jan-2013,177,357,246
+        2013,4677,2541,5594
+        Dec-2012,208,275,144
+        Nov-2012,166,240,160
+        Oct-2012,144,290,136
+        Sep-2012,365,396,253
+        Aug-2012,164,422,278
+        Jul-2012,325,469,278
+        Jun-2012,131,529,282
+        May-2012,132,304,
+        Apr-2012,126,392,
+        Mar-2012,112,377,
+        Feb-2012,150,356,
+        Jan-2012,151,524,
+        2012,2174,4574,1531
+        Dec-2011,155,388,
+        Nov-2011,187,279,
+        Oct-2011,258,366,
+        Sep-2011,185,397,
+        Aug-2011,239,401,
+        Jul-2011,259,308,
+        Jun-2011,271,386,
+        May-2011,177,381,
+        Apr-2011,211,289,
+        Mar-2011,247,311,
+        Feb-2011,197,252,
+        Jan-2011,259,389,
+        2011,2645,4147,
+        Dec-2010,151,217,
+        Nov-2010,171,307,
+        Oct-2010,185,312,
+        Sep-2010,273,254,
+        Aug-2010,426,516,
+        Jul-2010,535,443,
+        Jun-2010,284,385,
+        May-2010,337,387,
+        Apr-2010,328,385,
+        Mar-2010,367,336,
+        Feb-2010,352,304,
+        Jan-2010,196,263,
+        2010,3605,4109,
+        Dec-2009,367,475,
+        Nov-2009,122,226,
+        Oct-2009,410,435,
+        Sep-2009,203,332,
+        Aug-2009,456,618,
+        Jul-2009,275,407,
+        Jun-2009,437,498,
+        May-2009,155,387,
+        Apr-2009,355,565,
+        Mar-2009,252,426,
+        Feb-2009,258,402,
+        Jan-2009,191,366,
+        2009,3481,5137,
+        Dec-2008,316,576,
+        Nov-2008,340,521,
+        Oct-2008,317,575,
+        Sep-2008,440,584,
+        Aug-2008,431,627,
+        Jul-2008,465,623,
+        Jun-2008,509,747,
+        May-2008,563,886,
+        Apr-2008,1073,1272,
+        Mar-2008,1082,1623,
+        Feb-2008,721,1049,
+        Jan-2008,541,844,
+        2008,6798,9927,
+        Dec-2007,568,982,
+        Nov-2007,606,1095,
+        Oct-2007,887,1286,
+        Sep-2007,917,1360,
+        Aug-2007,1856,2457,
+        Jul-2007,1875,2671,
+        Jun-2007,1463,2180,
+        May-2007,2124,2809,
+        Apr-2007,1689,2495,
+        Mar-2007,2078,2682,
+        Feb-2007,1806,2607,
+        Jan-2007,2087,2948,
+        2007,17956,25572,
+        Dec-2006,0,2886,
+        Nov-2006,1975,3064,
+        Oct-2006,1427,2977,
+        Sep-2006,0,2556,
+        Aug-2006,0,2835,
+        Jul-2006,1850,3279,
+        Jun-2006,1009,2553,
+        May-2006,1055,2251,
+        Apr-2006,0,1792,
+        Mar-2006,0,1940,
+        Feb-2006,0,1569,
+        Jan-2006,0,1543,
+        2006,7316,29245,
+        Dec-2005,,1135,
+        Nov-2005,,1465,
+        Oct-2005,,1298,
+        Sep-2005,,1415,
+        Aug-2005,,2266,
+        Jul-2005,,1528,
+        Jun-2005,,1299,
+        May-2005,,1336,
+        Apr-2005,,1119,
+        Mar-2005,,871,
+        Feb-2005,,1266,
+        Jan-2005,,1188,
+        2005,,16186,
+        Dec-2004,,1106,
+        Nov-2004,,1653,
+        Oct-2004,,1011,
+        Sep-2004,,1031,
+        Aug-2004,,868,
+        Jul-2004,,818,
+        Jun-2004,,900,
+        May-2004,,656,
+        Apr-2004,,1304,
+        Mar-2004,,1001,
+        Feb-2004,,660,
+        Jan-2004,,609,
+        2004,,11617,
+    http_version: 
+  recorded_at: Tue, 12 Nov 2013 16:29:13 GMT
+recorded_with: VCR 2.6.0
