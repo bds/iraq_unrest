@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Iraq unrest : Ruby library to serialize, format, and visualize Iraq data" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Iraq unrest</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/bds/iraq_unrest">View on GitHub</a>
+
+          <h1 id="project_title">Iraq unrest</h1>
+          <h2 id="project_tagline">Ruby library to serialize, format, and visualize Iraq data</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/bds/iraq_unrest/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/bds/iraq_unrest/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="iraqunrest" class="anchor" href="#iraqunrest"><span class="octicon octicon-link"></span></a>IraqUnrest</h1>
+
+<p>Ruby library to assist in the visualization of Iraq data shared by Agence France-Presse.</p>
+
+<p><img src="examples/example_01.png" alt="Example"></p>
+
+<ul>
+<li>Supports serialzing into JSON, and Rickshaw.js data structures.</li>
+<li>Renders formatted CSV or HTML to file or string.</li>
+</ul><h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<pre><code>$ gem install iraq_unrest
+</code></pre>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h3>
+<a name="data" class="anchor" href="#data"><span class="octicon octicon-link"></span></a>Data</h3>
+
+<p>Requests are made to a <a href="http://u.afp.com/JSL">Google Spreadsheet</a> provided by Agence France-Presse.
+If you have any questions about the data, please contact <a href="https://twitter.com/prashantrao">AFP's Baghdad Bureau</a></p>
+
+<p>Data sets currently supported:</p>
+
+<ul>
+<li><code>IraqiCasualtiesComparison</code></li>
+<li><code>IraqGovernmentCasualtyFigures</code></li>
+</ul><p>Each data set has Ruby methods for serializing and formatting records.</p>
+
+<h3>
+<a name="visualization" class="anchor" href="#visualization"><span class="octicon octicon-link"></span></a>Visualization</h3>
+
+<p>A <code>visualize!</code> method is provided to create a time-series chart using HTML/Rickshaw.js</p>
+
+<pre><code>irb(main):001:0&gt; IraqUnrest::IraqGovernmentCasualtyFigure.visualize!
+
+=&gt; #&lt;File:iraq_government_casualty_figure.html (closed)&gt;
+</code></pre>
+
+<p><img src="examples/example_02.png" alt="Iraq Government Casualty Figure Graph"></p>
+
+<pre><code>irb(main):002:0&gt; IraqUnrest::IraqiCasualtiesComparison.visualize!
+
+=&gt; #&lt;File:iraqi_casualties_comparison.html (closed)&gt;
+</code></pre>
+
+<p><img src="examples/example_03.png" alt="Iraqi Casualties Comparison Graph"></p>
+
+<h3>
+<a name="serialization" class="anchor" href="#serialization"><span class="octicon octicon-link"></span></a>Serialization</h3>
+
+<h4>
+<a name="json" class="anchor" href="#json"><span class="octicon octicon-link"></span></a>JSON</h4>
+
+<p>Use <a href="https://github.com/rails-api/active_model_serializers/">ActiveModel::Serializers</a> to return all records as a JSON Array</p>
+
+<pre><code>irb(main):003:0&gt; IraqUnrest::IraqGovernmentCasualtyFigure.as_json
+
+[
+    [ 0] {
+                    :date =&gt; 1383202800,
+         :civilian_killed =&gt; "855",
+           :police_killed =&gt; "65",
+             :army_killed =&gt; "44",
+        :civilian_wounded =&gt; "1445",
+          :police_wounded =&gt; "88",
+            :army_wounded =&gt; "67",
+           :insurg_killed =&gt; "33",
+         :insurg_arrested =&gt; "167"
+    },
+    ...
+]
+</code></pre>
+
+<h4>
+<a name="rickshaw" class="anchor" href="#rickshaw"><span class="octicon octicon-link"></span></a>Rickshaw</h4>
+
+<p>Return all records as a JSON hash, using each attribute as a segment. This data set
+can then be rendered into a Rickshaw.js graph.</p>
+
+<pre><code>irb(main):004:0&gt; IraqUnrest::IraqiCasualtiesComparison.as_rickshaw
+
+{
+                :afp =&gt; [
+        [  0] {
+            :x =&gt; 1075536000,
+            :y =&gt; 0
+        },
+        [117] {
+            :x =&gt; 1383202800,
+            :y =&gt; 743
+        }
+    ],
+           :iraq_gov =&gt; [...],
+    :iraq_body_count =&gt; [...]
+}
+</code></pre>
+
+<h3>
+<a name="formatting" class="anchor" href="#formatting"><span class="octicon octicon-link"></span></a>Formatting</h3>
+
+<h4>
+<a name="csv" class="anchor" href="#csv"><span class="octicon octicon-link"></span></a>CSV</h4>
+
+<p>CSV methods provide clean and formatted data as a string or file. </p>
+
+<p>Creates a CSV file in local working directory</p>
+
+<pre><code>irb(main):005:0&gt; IraqUnrest::IraqGovernmentCasualtyFigure.to_csv!
+
+=&gt; #&lt;File:iraq_government_casualty_figure.csv (closed)&gt;
+</code></pre>
+
+<p>As a string</p>
+
+<pre><code>irb(main):006:0&gt; IraqUnrest::IraqGovernmentCasualtyFigure.to_csv
+
+=&gt; "date,civilian_killed,police_killed,army_killed,civilian_wounded,police_wounded..."
+</code></pre>
+
+<h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Iraq unrest maintained by <a href="https://github.com/bds">bds</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-45683704-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
