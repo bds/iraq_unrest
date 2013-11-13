@@ -2,7 +2,9 @@
 
 Ruby library to assist in the visualization of Iraq data shared by Agence France-Presse.
 
+<a href="http://bds.github.io/iraq_unrest/iraq_government_casualty_figure.html">
 <img src="examples/example_01.png" alt="Example" style="width: 640px; height: 480px;"/>
+</a>
 
 * Supports serialzing into JSON, and Rickshaw.js data structures.
 * Renders formatted CSV or HTML to file or string.
@@ -29,17 +31,21 @@ Each data set has Ruby methods for serializing and formatting records.
 
 A <code>visualize!</code> method is provided to create a time-series chart using HTML/Rickshaw.js
 
-    irb(main):001:0> IraqUnrest::IraqGovernmentCasualtyFigure.visualize!
-
-    => #<File:iraq_government_casualty_figure.html (closed)>
-
-<img src="examples/example_02.png" alt="Iraq Government Casualty Figure Graph" style="width: 640px; height: 480px;"/>
-
     irb(main):002:0> IraqUnrest::IraqiCasualtiesComparison.visualize!
 
     => #<File:iraqi_casualties_comparison.html (closed)>
 
-<img src="examples/example_03.png" alt="Iraqi Casualties Comparison Graph" style="width: 640px; height: 480px;"/>
+<a href="http://bds.github.io/iraq_unrest/iraqi_casualties_comparison.html">
+<img src="examples/example_02.png" alt="Iraqi Casualties Comparison Graph" style="width: 640px; height: 480px;"/>
+</a>
+
+    irb(main):001:0> IraqUnrest::IraqGovernmentCasualtyFigure.visualize!
+
+    => #<File:iraq_government_casualty_figure.html (closed)>
+
+<a href="http://bds.github.io/iraq_unrest/iraq_government_casualty_figure.html">
+<img src="examples/example_03.png" alt="Iraq Government Casualty Figure Graph" style="width: 640px; height: 480px;"/>
+</a>
 
 ### Serialization
  
