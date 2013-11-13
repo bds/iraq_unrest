@@ -1,6 +1,7 @@
 # IraqUnrest
 
 [![Code Climate](https://codeclimate.com/github/bds/iraq_unrest.png)](https://codeclimate.com/github/bds/iraq_unrest)
+[![Build Status](https://travis-ci.org/bds/iraq_unrest.png?branch=master)](https://travis-ci.org/bds/iraq_unrest)
 
 Ruby library to assist in the visualization of Iraq data shared by Agence France-Presse.
 
