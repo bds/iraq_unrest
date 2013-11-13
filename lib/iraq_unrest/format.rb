@@ -3,9 +3,6 @@ module IraqUnrest
   # Code from https://github.com/sandal/fatty
   class Format
     attr_accessor :params
-
-    # FIXME: Need to understand where the methods to be
-    #        implemented are declared
     def validate
     end
   end
@@ -30,15 +27,11 @@ module IraqUnrest
         check_required_params(params)
       end
 
-     # puts ListFormatter.render(:csv, :data => data)
      def render(format, params={})
         validate(format, params)
 
-        # Each format object implements all the required steps
-        # so they they can be used interchangeably
         format_obj = formats[format].new
 
-        # Customize
         format_obj.params = params
         format_obj.validate
         format_obj.render

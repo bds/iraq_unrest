@@ -2,8 +2,6 @@ module IraqUnrest
 
   module Serializers
 
-    # Gives to_json and as_json
-    # Used by both members and collections
     class IraqiCasualtiesComparisonSerializer < ::ActiveModel::Serializer
       attributes :date, :afp, :iraq_gov, :iraq_body_count
 
