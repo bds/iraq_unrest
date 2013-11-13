@@ -116,7 +116,7 @@ module IraqUnrest
         describe "CSV file" do
 
           before do
-            @csv = CSV.table(@file.path, :skip_lines => /#/)
+            @csv = CSV.table(@file.path)
           end
 
           it "must have the correct headers" do
