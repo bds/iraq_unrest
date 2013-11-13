@@ -1,5 +1,7 @@
 # IraqUnrest
 
+[![Code Climate](https://codeclimate.com/github/bds/iraq_unrest.png)](https://codeclimate.com/github/bds/iraq_unrest)
+
 Ruby library to assist in the visualization of Iraq data shared by Agence France-Presse.
 
 <a href="http://bds.github.io/iraq_unrest/iraq_government_casualty_figure.html">
