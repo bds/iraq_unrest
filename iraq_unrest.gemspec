@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["bd9302@gmail.com"]
   spec.description   = %q{Ruby library to serialize, format, and visualize Iraq data shared by Agence France-Presse.}
   spec.summary       = %q{Generates Rickshaw/D3.js graphs and formatted data files for Iraq data}
-  spec.homepage      = "https://github.com/bds/iraq_unrest"
+  spec.homepage      = "http://bds.github.io/iraq_unrest"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
