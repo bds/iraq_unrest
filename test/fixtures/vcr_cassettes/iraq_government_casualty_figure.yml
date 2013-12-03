@@ -19,15 +19,15 @@ http_interactions:
       Content-Disposition:
       - attachment; filename="Iraq Unrest.csv"
       Set-Cookie:
-      - NID=67=uwoB2ugbyq-jGSmZq1XiowMDE5_FXC2Pu4_HQPzWowKD3_xYmyXAOshxb8BiGerBt0oWLDZw1S0WTvuQpCiDYu-0qvBvjorrPCNfbGUOqK-vANG2-qAcQbo2hMq8S7Kd;Domain=.google.com;Path=/;Expires=Wed,
-        14-May-2014 16:29:07 GMT;HttpOnly
+      - NID=67=e-HN-2QoTTVpu4XmIODHGXyGJIDwBqQmNmFwlIfLN9RlGONEjlkDxGfGBxLZ_RliUgeszy1Fgwc7oJm3tjPAE9t4m_fqbjnuDv3JbEpVxHBVPEfNJLnpppQGL-EyDqp8;Domain=.google.com;Path=/;Expires=Wed,
+        04-Jun-2014 04:38:10 GMT;HttpOnly
       P3p:
       - CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657
         for more info."
       Date:
-      - Tue, 12 Nov 2013 16:29:07 GMT
+      - Tue, 03 Dec 2013 04:38:10 GMT
       Expires:
-      - Tue, 12 Nov 2013 16:29:07 GMT
+      - Tue, 03 Dec 2013 04:38:10 GMT
       Cache-Control:
       - private, max-age=0
       X-Content-Type-Options:
@@ -50,7 +50,7 @@ http_interactions:
         ,Killed,,,,Wounded,,,,Insurgents,
         ,Civilians,Police,Army,Total,Civilians,Police,Army,Total,Killed,Arrested
         Dec-2013,,,,0,,,,0,,
-        Nov-2013,,,,0,,,,0,,
+        Nov-2013,852,53,43,948,1208,89,52,1349,77,232
         Oct-2013,855,65,44,964,1445,88,67,1600,33,167
         Sep-2013,768,62,55,885,969,95,76,1140,86,523
         Aug-2013,267,56,33,356,455,78,54,587,87,496
@@ -61,7 +61,7 @@ http_interactions:
         Mar-2013,95,45,23,163,135,77,44,256,30,67
         Feb-2013,88,26,22,136,123,65,40,228,,
         Jan-2013,120,35,22,177,164,54,40,258,33,72
-        2013,3694,567,416,4677,5810,929,673,7412,451,1721
+        2013,4546,620,459,5625,7018,1018,725,8761,528,1953
         Dec-2012,125,55,28,208,188,88,58,334,19,70
         Nov-2012,101,35,30,166,129,68,55,252,12,51
         Oct-2012,88,31,25,144,110,92,62,264,22,77
@@ -157,5 +157,5 @@ http_interactions:
         ,,,,,,,,,,
         NB: Months with only police figures are combined police/army tolls,,,,,,,,,,
     http_version: 
-  recorded_at: Tue, 12 Nov 2013 16:29:07 GMT
+  recorded_at: Tue, 03 Dec 2013 04:38:10 GMT
 recorded_with: VCR 2.6.0
