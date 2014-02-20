@@ -114,6 +114,22 @@ As a string
 
     => "date,civilian_killed,police_killed,army_killed,civilian_wounded,police_wounded..."
 
+## Running tests
+
+    $ git clone git@github.com:bds/iraq_unrest.git
+    $ cd iraq_unrest
+    $ bundle install
+    $ bundle exec rake test
+    Run options: --seed 42961
+
+    # Running tests:
+
+    ....................................................................
+
+    Fabulous tests in 0.616394s, 110.3190 tests/s, 3844.9433 assertions/s.
+
+    68 tests, 2370 assertions, 0 failures, 0 errors, 0 skips
+
 ## Contributing
 
 1. Fork it
